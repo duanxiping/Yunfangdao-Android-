@@ -1,0 +1,46 @@
+http://42.121.53.207/command?auth_code=<获取到auth_code> (请求和发开关锁控制指令一样)
+
+
+//0x11指令标定车型
+exports.COMMAND_BZU = 0x0000; //标准车型                0
+
+大众
+exports.COMMAND_DAZ = 0x0100; //大众和奥迪其他          256
+exports.COMMAND_AODI = 0x0101;//奥迪A3、A4、A5、Q5      257
+exports.COMMAND_BOL = 0x0102;//大众朗逸、宝来           258
+exports.COMMAND_Q7 = 0x0103;//Q7                        259
+A6                                                      260
+
+通用系列
+exports.COMMAND_TY = 0x0200; //通用                     512
+
+
+福特
+exports.COMMAND_FTE = 0x0300; //福特 新FOCUS 、翼虎     768         
+exports.COMMAND_FKS = 0x0301; //经典FOCUS               769
+exports.COMMAND_MDE = 0x0302; //老蒙迪欧                770
+exports.COMMAND_YB0 = 0x0303; //翼搏、嘉年华            771
+exports.COMMAND_XMD = 0x0304; //新蒙迪欧                772
+exports.COMMAND_RJE = 0x0305; //锐界                    773
+
+丰田系列
+exports.COMMAND_FTI = 0x0400; //丰田                    1024
+
+本田系列
+exports.COMMAND_BTI= 0x0500; //除飞度以外的             1280
+exports.COMMAND_FDU= 0x0501; //飞度                     1281
+
+日产系列
+exports.COMMAND_RCA = 0x0600; //日产 除0X0601的所有车型   1536
+exports.COMMAND_YIX = 0x0601; //经典轩逸和新款骊威        1537
+
+
+现代起亚
+exports.COMMAND_QIY= 0x0700; //起亚                       1792
+exports.COMMAND_XDA = 0x0800; //现代  除IX35所有的现代    2048
+exports.COMMAND_X35 = 0x0801; //IX35                      2049
+
+exports.COMMAND_BMW= 0x0900; //宝马                       2304
+exports.COMMAND_BCI = 0x0A00; //奔驰                      2560
+exports.COMMAND_BZI= 0x0E00; //标志                       3584
+exports.COMMAND_CLSL = 0x1200; //克莱斯勒                 4608

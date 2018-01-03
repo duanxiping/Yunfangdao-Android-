@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="userInfo"
+            type="com.vrd.tech.yfd.entity.WiUserInfo" />
+
+        <variable
+            name="eventAction"
+            type="com.vrd.tech.yfd.event.UserInfoEvent" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent">
+
+            <TextView
+                style="@style/default_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/my_aacount" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:onClick="@{() -> eventAction.submmitAlterInfo(userInfo)}"
+                android:text="@string/submit_info"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <!--左边文字描述-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/account_name" />
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/license_alert" />
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/license_alert_date"
+                    android:visibility="@{userInfo.annual_inspect_alert ? View.VISIBLE : View.INVISIBLE}" />
+            </LinearLayout>
+
+            <!--右边content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/objName"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="@string/account_name"
+                    android:onTextChanged="@{(v,s,e,c) -> eventAction.onTextChanged(v,userInfo)}"
+                    android:singleLine="true"
+                    android:text="@{userInfo.cust_name}" />
+
+                <ToggleButton
+                    android:id="@+id/annualSurvey"
+                    style="@style/car_set_toggle"
+                    android:checked="@{userInfo.annual_inspect_alert ? true:false}"
+                    android:onCheckedChanged="@{(cb,isChecked) -> eventAction.onAlertToggleChange(userInfo,isChecked)}" />
+
+                <TextView
+                    android:id="@+id/annualSurveyDate"
+                    style="@style/car_set_item_right"
+                    android:gravity="center_vertical"
+                    android:onClick="@{() -> eventAction.showDatePicker(userInfo)}"
+                    android:paddingLeft="5dp"
+                    android:text='@{eventAction.dateHandler(userInfo.annual_inspect_date)}'
+                    android:textSize="16sp"
+                    android:visibility="@{userInfo.annual_inspect_alert ? View.VISIBLE : View.INVISIBLE}" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

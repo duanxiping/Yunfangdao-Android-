@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:alpha="0.73"
+    android:background="@drawable/main_menu_bg">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:paddingTop="6dp">
+
+        <ImageView
+            android:id="@+id/fa_icon_1"
+            style="@style/main_menu_icon"
+            android:src="@drawable/menu_obd" />
+
+        <TextView
+            style="@style/main_menu_txt"
+            android:layout_below="@+id/fa_icon_1"
+            android:text="@string/obd_info" />
+
+        <ImageView
+            android:id="@+id/fa_icon_2"
+            style="@style/main_menu_icon"
+            android:layout_toRightOf="@+id/fa_icon_1"
+            android:src="@drawable/menu_search" />
+
+        <TextView
+            style="@style/main_menu_txt"
+            android:layout_below="@+id/fa_icon_2"
+            android:text="@string/find_car"
+            app:layout_marginLeftPercent="33.33%w" />
+
+        <ImageView
+            android:id="@+id/fa_icon_3"
+            style="@style/main_menu_icon"
+            android:layout_toRightOf="@+id/fa_icon_2"
+            android:src="@drawable/menu_violations" />
+
+        <TextView
+            style="@style/main_menu_txt"
+            android:layout_below="@+id/fa_icon_3"
+            android:text="@string/traffic_violations"
+            app:layout_marginLeftPercent="66.66%w" />
+
+        <!--第二排分割线-->
+
+        <ImageView
+            android:id="@+id/fa_icon_4"
+            style="@style/main_menu_icon_second"
+            android:src="@drawable/menu_car_set" />
+
+        <TextView
+            style="@style/main_menu_txt"
+            android:layout_below="@+id/fa_icon_4"
+            android:text="@string/car_setting" />
+
+        <ImageView
+            android:id="@+id/fa_icon_5"
+            style="@style/main_menu_icon_second"
+            android:layout_toRightOf="@+id/fa_icon_4"
+            android:src="@drawable/menu_more" />
+
+        <TextView
+            style="@style/main_menu_txt"
+            android:layout_below="@+id/fa_icon_5"
+            android:text="@string/more_menu"
+            app:layout_marginLeftPercent="33.33%w" />
+
+        <ImageView
+            android:id="@+id/fa_icon_6"
+            style="@style/main_menu_icon_second"
+            android:layout_toRightOf="@+id/fa_icon_2"
+            android:src="@drawable/menu_history" />
+
+        <TextView
+            style="@style/main_menu_txt"
+            android:layout_below="@+id/fa_icon_6"
+            android:text="@string/history_msg"
+            app:layout_marginLeftPercent="66.66%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentFrameLayout>

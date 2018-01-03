@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/tv_obj_name_map"
+            style="@style/default_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/car_obj_name" />
+    </RelativeLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/container_trajectory_control"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="53dp"
+        android:alpha="0.8"
+        android:background="@drawable/map_trajectory_control_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/trajectoryStopOrStart"
+            style="@style/map_trajectory_control_icon"
+            android:background="@drawable/trajectoroy_stop" />
+
+        <ProgressBar
+            android:id="@+id/trajectoryProgress"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:progressDrawable="@drawable/my_progress_drawable"
+            app:layout_widthPercent="46%w" />
+
+        <ImageView
+            android:id="@+id/trajectorySpeedDown"
+            style="@style/map_trajectory_control_icon"
+            android:background="@drawable/trajectoroy_speed_down" />
+
+        <ImageView
+            android:id="@+id/trajectorySpeedNormal"
+            style="@style/map_trajectory_control_icon"
+            android:background="@drawable/trajectoroy_speed_normal" />
+
+        <ImageView
+            android:id="@+id/trajectorySpeedUp"
+            style="@style/map_trajectory_control_icon"
+            android:background="@drawable/trajectoroy_speed_up" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:alpha="0.9"
+        android:background="@drawable/map_bottom_bg">
+
+        <ImageView
+            android:id="@+id/imageLocate"
+            style="@style/map_bottom_icon"
+            android:background="@drawable/locate_car_icon"
+            app:layout_marginLeftPercent="7%w" />
+
+        <TextView
+            android:id="@+id/tv_locate"
+            style="@style/map_bottom_text"
+            android:text="@string/trace"
+            app:layout_marginLeftPercent="16%w" />
+
+        <ImageView
+            android:id="@+id/imageTrajectory"
+            style="@style/map_bottom_icon"
+            android:background="@drawable/trajectory_icon"
+            app:layout_marginLeftPercent="37%w" />
+
+        <TextView
+            android:id="@+id/tv_trajectory"
+            style="@style/map_bottom_text"
+            android:text="@string/trajectory"
+            app:layout_marginLeftPercent="47%w" />
+
+        <ImageView
+            android:id="@+id/imageFindCar"
+            style="@style/map_bottom_icon"
+            android:background="@drawable/find_car_icon"
+            app:layout_marginLeftPercent="72%w" />
+
+        <TextView
+            android:id="@+id/tv_find_car"
+            style="@style/map_bottom_text"
+            android:text="@string/find_car"
+            app:layout_marginLeftPercent="82%w" />
+
+        <View
+            style="@style/map_bottom_divider"
+            app:layout_marginLeftPercent="30%w" />
+
+        <View
+            style="@style/map_bottom_divider"
+            app:layout_marginLeftPercent="70%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</RelativeLayout>

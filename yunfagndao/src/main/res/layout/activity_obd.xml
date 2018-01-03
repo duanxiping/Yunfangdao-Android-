@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/obd_top_bg"
+        app:layout_heightPercent="66.8%w" />
+
+    <ImageView
+        android:id="@+id/imageScanner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/obd_top_scanner"
+        app:layout_heightPercent="66.8%w"
+        app:layout_widthPercent="16.25%w" />
+
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/obd_circle_bg"
+        app:layout_marginTopPercent="54.4%w" />
+
+    <ImageView
+        style="@style/obd_center_circle"
+        android:background="@drawable/obd_circle" />
+
+    <ImageView
+        android:id="@+id/circleLeft1"
+        style="@style/obd_center_circle"
+        android:background="@drawable/obd_circle_left1" />
+
+    <ImageView
+        android:id="@+id/circleLeft2"
+        style="@style/obd_center_circle"
+        android:background="@drawable/obd_circle_left2" />
+
+    <ImageView
+        android:id="@+id/circleRight1"
+        style="@style/obd_center_circle"
+        android:background="@drawable/obd_circle_right1" />
+
+    <ImageView
+        android:id="@+id/circleRight2"
+        style="@style/obd_center_circle"
+        android:background="@drawable/obd_circle_right2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分"
+        android:textColor="#0A95D4"
+        android:textSize="11sp"
+        app:layout_marginLeftPercent="55%w"
+        app:layout_marginTopPercent="63%w" />
+
+    <TextView
+        android:id="@+id/carHealthyScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="100"
+        android:textColor="#666666"
+        android:textSize="30sp"
+        app:layout_marginTopPercent="65%w" />
+
+    <ImageView
+        android:id="@+id/content_divider"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:layout_below="@+id/circleRight1"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/obd_content_divider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_divider"
+        android:layout_margin="5dp"
+        android:background="@drawable/obd_content_bg"
+        android:padding="3dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout style="@style/obd_content_item_container">
+
+                <ImageView
+                    style="@style/obd_content_item_icon"
+                    android:background="@drawable/obd_dy" />
+
+                <TextView
+                    style="@style/obd_content_item_description"
+                    android:text="电源系统" />
+
+                <TextView
+                    android:id="@+id/dyVal"
+                    style="@style/obd_content_item_value" />
+
+                <TextView
+                    android:id="@+id/dyStateDescription"
+                    style="@style/obd_content_item_state_description"
+                    android:text="正常" />
+
+                <ImageView
+                    android:id="@+id/dyState"
+                    style="@style/obd_content_item_state_icon"
+                    android:background="@drawable/obd_state_normal" />
+            </RelativeLayout>
+
+            <View style="@style/obd_content_item_divider" />
+
+            <RelativeLayout style="@style/obd_content_item_container">
+
+                <ImageView
+                    style="@style/obd_content_item_icon"
+                    android:background="@drawable/obd_sw" />
+
+                <TextView
+                    style="@style/obd_content_item_description"
+                    android:text="冷却系统" />
+
+                <TextView
+                    android:id="@+id/swVal"
+                    style="@style/obd_content_item_value" />
+
+                <TextView
+                    android:id="@+id/swStateDescription"
+                    style="@style/obd_content_item_state_description"
+                    android:text="正常" />
+
+                <ImageView
+                    android:id="@+id/swState"
+                    style="@style/obd_content_item_state_icon"
+                    android:background="@drawable/obd_state_normal" />
+            </RelativeLayout>
+
+            <View style="@style/obd_content_item_divider" />
+
+            <RelativeLayout style="@style/obd_content_item_container">
+
+                <ImageView
+                    style="@style/obd_content_item_icon"
+                    android:background="@drawable/obd_fdjzs" />
+
+                <TextView
+                    style="@style/obd_content_item_description"
+                    android:text="怠速控制系统" />
+
+                <TextView
+                    android:id="@+id/fdjzsVal"
+                    style="@style/obd_content_item_value" />
+
+                <TextView
+                    android:id="@+id/fdjzsStateDescription"
+                    style="@style/obd_content_item_state_description"
+                    android:text="正常" />
+
+                <ImageView
+                    android:id="@+id/fdjzsState"
+                    style="@style/obd_content_item_state_icon"
+                    android:background="@drawable/obd_state_normal" />
+            </RelativeLayout>
+
+            <View style="@style/obd_content_item_divider" />
+
+            <RelativeLayout style="@style/obd_content_item_container">
+
+                <ImageView
+                    style="@style/obd_content_item_icon"
+                    android:background="@drawable/obd_jqmkd" />
+
+                <TextView
+                    style="@style/obd_content_item_description"
+                    android:text="进气系统" />
+
+                <TextView
+                    android:id="@+id/jqmkdVal"
+                    style="@style/obd_content_item_value" />
+
+                <TextView
+                    android:id="@+id/jqmkdStateDescription"
+                    style="@style/obd_content_item_state_description"
+                    android:text="正常" />
+
+                <ImageView
+                    android:id="@+id/jqmkdState"
+                    style="@style/obd_content_item_state_icon"
+                    android:background="@drawable/obd_state_normal" />
+            </RelativeLayout>
+
+            <View style="@style/obd_content_item_divider" />
+
+            <RelativeLayout style="@style/obd_content_item_container">
+
+                <ImageView
+                    style="@style/obd_content_item_icon"
+                    android:background="@drawable/obd_sychj" />
+
+                <TextView
+                    style="@style/obd_content_item_description"
+                    android:text="排气系统" />
+
+                <TextView
+                    android:id="@+id/sychjVal"
+                    style="@style/obd_content_item_value" />
+
+                <TextView
+                    android:id="@+id/sychjStateDescription"
+                    style="@style/obd_content_item_state_description"
+                    android:text="正常" />
+
+                <ImageView
+                    android:id="@+id/sychjState"
+                    style="@style/obd_content_item_state_icon"
+                    android:background="@drawable/obd_state_normal" />
+            </RelativeLayout>
+
+            <View style="@style/obd_content_item_divider" />
+
+            <RelativeLayout style="@style/obd_content_item_container">
+
+                <ImageView
+                    style="@style/obd_content_item_icon"
+                    android:background="@drawable/obd_fdzfh" />
+
+                <TextView
+                    style="@style/obd_content_item_description"
+                    android:text="发动机负荷" />
+
+                <TextView
+                    android:id="@+id/fdjfhVal"
+                    style="@style/obd_content_item_value" />
+
+                <TextView
+                    android:id="@+id/fdjfhStateDescription"
+                    style="@style/obd_content_item_state_description"
+                    android:text="正常" />
+
+                <ImageView
+                    android:id="@+id/fdjfhState"
+                    style="@style/obd_content_item_state_icon"
+                    android:background="@drawable/obd_state_normal" />
+            </RelativeLayout>
+
+            <View style="@style/obd_content_item_divider" />
+
+            <RelativeLayout style="@style/obd_content_item_container">
+
+                <ImageView
+                    style="@style/obd_content_item_icon"
+                    android:background="@drawable/obd_syyl" />
+
+                <TextView
+                    style="@style/obd_content_item_description"
+                    android:text="剩余油量" />
+
+                <TextView
+                    android:id="@+id/syylVal"
+                    style="@style/obd_content_item_value" />
+
+                <TextView
+                    android:id="@+id/syylStateDescription"
+                    style="@style/obd_content_item_state_description"
+                    android:text="正常" />
+
+                <ImageView
+                    android:id="@+id/syylState"
+                    style="@style/obd_content_item_state_icon"
+                    android:background="@drawable/obd_state_normal" />
+            </RelativeLayout>
+
+            <View style="@style/obd_content_item_divider" />
+
+            <RelativeLayout style="@style/obd_content_item_container">
+
+                <ImageView
+                    style="@style/obd_content_item_icon"
+                    android:background="@drawable/obd_dhtqj" />
+
+                <TextView
+                    style="@style/obd_content_item_description"
+                    android:text="点火提前角" />
+
+                <TextView
+                    android:id="@+id/dhtqjVal"
+                    style="@style/obd_content_item_value" />
+
+                <TextView
+                    android:id="@+id/dhtqjStateDescription"
+                    style="@style/obd_content_item_state_description"
+                    android:text="正常" />
+
+                <ImageView
+                    android:id="@+id/dhtqjState"
+                    style="@style/obd_content_item_state_icon"
+                    android:background="@drawable/obd_state_normal" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.zhy.android.percent.support.PercentRelativeLayout>

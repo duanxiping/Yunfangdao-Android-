@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="car_brands">
+        <item>奥迪</item>
+        <item>奔驰</item>
+        <item>宝马</item>
+        <item>别克</item>
+        <item>雪佛兰</item>
+        <item>克莱斯勒</item>
+        <item>雪铁龙</item>
+        <item>大众</item>
+        <item>福特</item>
+        <item>海马</item>
+        <item>本田</item>
+        <item>现代</item>
+        <item>吉普</item>
+        <item>起亚</item>
+        <item>雷克萨斯</item>
+        <item>马自达</item>
+        <item>日产</item>
+        <item>标致</item>
+        <item>荣威</item>
+        <item>斯柯达</item>
+        <item>丰田</item>
+    </string-array>
+    <string-array name="toyota_series">
+        <item>凯美瑞</item>
+        <item>RAV4</item>
+        <item>锐志</item>
+        <item>皇冠</item>
+        <item>汉兰达</item>
+        <item>霸道</item>
+        <item>塞纳</item>
+        <item>EZ</item>
+        <item>花冠</item>
+        <item>卡罗拉</item>
+        <item>雅力士致炫</item>
+        <item>逸致</item>
+        <item>威驰</item>
+        <item>普拉多</item>
+        <item>兰德酷路泽</item>
+        <item>雅力士</item>
+        <item>雷凌</item>
+    </string-array>
+    <string-array name="audi_series">
+        <item>奥迪 A1</item>
+        <item>奥迪 A3</item>
+        <item>奥迪 A4</item>
+        <item>奥迪 A5</item>
+        <item>奥迪 A6</item>
+        <item>奥迪 A6L</item>
+        <item>奥迪 A7</item>
+        <item>奥迪 A8</item>
+        <item>奥迪 Q3</item>
+        <item>奥迪 Q5</item>
+        <item>奥迪 Q7</item>
+    </string-array>
+    <string-array name="benz_series">
+        <item>奔驰 S350</item>
+        <item>奔驰 GLK350</item>
+        <item>奔驰 B200</item>
+    </string-array>
+    <string-array name="bmw_series">
+        <item>宝马 X5</item>
+        <item>宝马 X6</item>
+        <item>宝马 730</item>
+        <item>宝马 740</item>
+        <item>宝马 750</item>
+        <item>宝马 318</item>
+        <item>宝马5系GT505i</item>
+        <item>宝马 520Li</item>
+        <item>宝马 535Li</item>
+        <item>宝马 320Li</item>
+        <item>宝马 X1</item>
+        <item>宝马 X3</item>
+        <item>宝马 118i</item>
+        <item>宝马 320i GT</item>
+        <item>宝马 535i GT</item>
+        <item>宝马 730Li</item>
+    </string-array>
+    <string-array name="buick_series">
+        <item>君威</item>
+        <item>英朗</item>
+        <item>GL8</item>
+        <item>昂科雷</item>
+        <item>林荫大道</item>
+        <item>君越</item>
+        <item>昂科拉</item>
+        <item>凯越</item>
+    </string-array>
+    <string-array name="chevrolet_series">
+        <item>科鲁兹</item>
+        <item>科帕奇</item>
+        <item>景程</item>
+        <item>爱唯欧</item>
+        <item>迈锐宝</item>
+    </string-array>
+    <string-array name="chrysler_series">
+        <item>大捷龙</item>
+    </string-array>
+    <string-array name="citroen_series">
+        <item>雪铁龙C5</item>
+        <item>雪铁龙C2</item>
+        <item>世嘉</item>
+        <item>凯旋</item>
+        <item>雪铁龙C4L</item>
+    </string-array>
+    <string-array name="dazhong_series">
+        <item>速腾</item>
+        <item>高尔夫</item>
+        <item>迈腾</item>
+        <item>途观</item>
+        <item>大众CC</item>
+        <item>帕萨特</item>
+        <item>宝来</item>
+        <item>捷达</item>
+        <item>POLO</item>
+        <item>桑塔纳</item>
+        <item>朗逸</item>
+        <item>朗行</item>
+        <item>途安</item>
+    </string-array>
+    <string-array name="ford_series">
+        <item>经典福克斯</item>
+        <item>老蒙迪欧(2012年以前含2012)</item>
+        <item>蒙迪欧</item>
+        <item>嘉年华</item>
+        <item>翼虎</item>
+        <item>翼博</item>
+        <item>新福克斯</item>
+        <item>锐界</item>
+    </string-array>
+    <string-array name="haima_series">
+        <item>2014款海马</item>
+    </string-array>
+    <string-array name="honda_series">
+        <item>奥德赛</item>
+        <item>雅阁</item>
+        <item>歌诗图</item>
+        <item>飞度</item>
+        <item>CRV、本田CR-V</item>
+        <item>思域</item>
+        <item>杰德</item>
+        <item>思铂睿</item>
+        <item>锋范</item>
+        <item>凌派</item>
+    </string-array>
+    <string-array name="hyundai_series">
+        <item>朗动</item>
+        <item>胜达</item>
+        <item>索纳塔</item>
+        <item>IX35</item>
+        <item>悦动</item>
+        <item>IX25</item>
+        <item>名图</item>
+        <item>瑞纳</item>
+        <item>途胜</item>
+        <item>索纳塔八</item>
+    </string-array>
+    <string-array name="jeep_series">
+        <item>牧马人</item>
+        <item>指南者</item>
+        <item>自由客</item>
+    </string-array>
+    <string-array name="kia_series">
+        <item>起亚K2</item>
+        <item>起亚K3</item>
+        <item>起亚K5</item>
+        <item>智跑</item>
+        <item>佳乐</item>
+        <item>索兰托</item>
+        <item>福瑞迪</item>
+        <item>索拉图</item>
+        <item>起亚VQ</item>
+        <item>福瑞迪</item>
+        <item>赛拉图</item>
+        <item>狮跑</item>
+        <item>速迈</item>
+        <item>秀尔</item>
+    </string-array>
+    <string-array name="lexus_series">
+        <item>ES240</item>
+        <item>林志IS30</item>
+    </string-array>
+    <string-array name="mazda_series">
+        <item>马自达3</item>
+        <item>马自达6</item>
+        <item>睿翼</item>
+        <item>M5</item>
+    </string-array>
+    <string-array name="nissan_series">
+        <item>骊威</item>
+        <item>阳光</item>
+        <item>轩逸</item>
+        <item>奇骏</item>
+        <item>颐达</item>
+        <item>玛驰</item>
+        <item>骐达</item>
+        <item>天籁</item>
+        <item>逍客</item>
+        <item>楼兰</item>
+        <item>蓝鸟</item>
+    </string-array>
+    <string-array name="peugeot_series">
+        <item>标致408</item>
+        <item>标致207</item>
+        <item>标致508</item>
+        <item>标致3008</item>
+        <item>标致307</item>
+        <item>标致308</item>
+    </string-array>
+    <string-array name="roewe_series">
+        <item>荣威350</item>
+        <item>荣威550</item>
+        <item>荣威950</item>
+        <item>荣威W5</item>
+    </string-array>
+    <string-array name="skoda_series">
+        <item>昊锐</item>
+        <item>明锐</item>
+        <item>晶锐</item>
+    </string-array>
+</resources>

@@ -1,0 +1,195 @@
+<resources>
+    <string name="app_name">云防盗</string>
+    <string name="my_key">d5eeff3989ebc544f87fb567bc122648</string>
+    <string name="my_secret">4da226cf7a30d11938ff7a9888cd996d</string>
+    <string name="server_ip">http://m.autogps.cn/</string>
+    <string name="server_ip_new">http://yun.autogps.cn/</string>
+    <string name="control_server_ip_new">api.wo365.net</string>
+    <string name="center_server_ip_new">yun.autogps.cn</string>
+    <string name="control_server_ip">wo.autogps.cn</string>
+    <string name="center_server_ip">m.autogps.cn</string>
+    <string name="server_ip_papa">http://api.ivrd.cn/</string>
+    <string name="cant_be_null">不能为空</string>
+    <string name="input_effective_msg">请输入有效信息</string>
+    <string name="network_exception">通信异常，请检查网络！</string>
+    <string name="network_retry">通信异常，请重新选择车辆！</string>
+    <string name="btn_yes">确认</string>
+    <string name="btn_no">取消</string>
+    <string name="waiting_please">稍等...</string>
+    <string name="default_auth">bba2204bcd4c1f87a19ef792f1f68404</string>
+    <string name="more_settting">更多</string>
+    <string name="my_aacount">我的账号</string>
+    <string name="car_model_setting">车型标定</string>
+    <string name="car_binding">车辆绑定</string>
+    <string name="alter_password">修改密码</string>
+    <string name="current_password">当前密码</string>
+    <string name="input_pwd_error">当前密码不正确，请重新输入！</string>
+    <string name="network_connect_error_msg">Failed to connect to</string>
+    <string name="alter_pwd_success">修改密码成功！</string>
+    <string name="alter_pwd_fail">修改密码失败！</string>
+    <string name="title_choose_model">选择车型：</string>
+    <string name="set_car_series_success">标定车型成功！</string>
+    <string name="set_car_series_fail">标定车型失败！</string>
+    <string name="update_url">http://3g.ivrd.cn/vrd-yfd-version.html</string>
+    <!--忘记密码和注册页面-->
+    <string name="title_register">注册</string>
+    <string name="title_binding">车辆绑定</string>
+    <string name="device_serial">终端条码</string>
+    <string name="device_sim">终端SIM卡号</string>
+    <string name="phone_num">手机号码</string>
+    <string name="register_ensure">确认注册</string>
+    <string name="binding_ensure">确认绑定</string>
+    <string name="title_forget">忘记密码</string>
+    <string name="register_success">注册成功！</string>
+    <string name="register_failed">注册失败！</string>
+    <string name="device_already_registered">终端已注册，请更换终端！</string>
+    <string name="wrong_device_serial">无效终端信息，请更换终端！</string>
+    <string name="forget_step1">填写信息</string>
+    <string name="forget_step2">验证账号</string>
+    <string name="forget_step3">重置密码</string>
+    <string name="register_step3">终端信息</string>
+    <string name="forget_step4">完成</string>
+    <string name="get_valid_code">获取验证码</string>
+    <string name="input_pass_again">重复密码</string>
+    <string name="next_step">下一步</string>
+    <string name="forget_finish">恭喜，密码修改成功！（忘记可通过短信找回）</string>
+    <string name="register_finish">恭喜，注册成功！</string>
+    <string name="check_valid_code">验证</string>
+    <string name="valid_code">验证码</string>
+    <string name="wrong_phone_num">无效号码</string>
+    <string name="new_password">新密码</string>
+    <string name="ensure_modify_pwd">确认更改</string>
+    <string name="check_valid_fail">验证失败，请重新获取</string>
+    <string name="submitting">正在提交，请稍后..</string>
+    <string name="to_login_page">去登陆</string>
+    <string name="to_login_page_new">去登陆，密码默认手机后6位</string>
+    <string name="pwd_again_error">输入不一致请重新输入</string>
+    <string name="reset_pwd_failed">重置密码失败！</string>
+    <string name="get_valid_code_fail">获取验证码失败！</string>
+    <string name="invalid_account">无效的账户信息</string>
+    <string name="invalid_account_valid_again">无效的账户信息，请重新验证</string>
+    <string name="valid_user_fail">验证账号失败！</string>
+    <string name="user_check">身份验证</string>
+
+    <!--登陆页面-->
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登陆</string>
+    <string name="forget_pwd">忘记密码</string>
+    <string name="register_new">新注册</string>
+    <string name="login_fail">登陆失败，请检查用户名或密码！</string>
+    <string name="update_tips">更新提示</string>
+    <string name="update_content">检测到新版本，是否下载更新？</string>
+
+    <!--主界面-->
+    <string name="add_in_future">等待添加</string>
+    <string name="no_vehicle">无车辆信息</string>
+    <string name="no_obd_data">无OBD信息</string>
+    <string name="ensure_exit">再按一次，退出应用</string>
+    <string name="waiting_moment">请稍候</string>
+    <string name="device_offline">终端不在线，无法操作！</string>
+    <string name="frequent_operation">操作频繁，请稍候！</string>
+    <string name="lock_to_lock">锁车状态，无需锁车</string>
+    <string name="unlock_to_unlock">解锁状态，无需解锁</string>
+    <string name="lock_fail">锁车失败！</string>
+    <string name="unlock_fail">解锁失败！</string>
+    <string name="stop_fail">熄火失败！</string>
+    <string name="lock_success">锁车成功！</string>
+    <string name="unlock_success">解锁成功！</string>
+    <string name="stop_success">熄火成功！</string>
+    <string name="start_cant_unlock">启动状态，无法开锁！</string>
+    <string name="start_cant_lock">启动状态，无法锁车！</string>
+    <string name="door_open_cant_lock">开门状态，无法锁车！</string>
+    <string name="start_to_start">启动状态，无需启动！</string>
+    <string name="door_unlock_cant_start">开锁状态，无法远程启动！</string>
+    <string name="start_fail">APP启动失败！</string>
+    <string name="start_success">APP启动成功！</string>
+    <string name="start_cant_stop">启动状态，无法远程熄火！</string>
+    <string name="stop_engine">熄火</string>
+    <string name="stop_dialog_msg">确认发送远程熄火指令？</string>
+    <string name="start_cant_find_car">启动状态，无法寻车！</string>
+
+    <!--主界面，popupwindow菜单-->
+    <string name="obd_info">远程诊断</string>
+    <string name="find_car">寻车</string>
+    <string name="traffic_violations">违章查询</string>
+    <string name="car_setting">车辆设置</string>
+    <string name="more_menu">更多</string>
+    <string name="history_msg">历史记录</string>
+
+    <!--历史消息界面-->
+    <string name="title_history_info">历史消息</string>
+    <string name="title_alert_info">警报消息</string>
+    <string name="no_more_data">没有更多数据</string>
+    <string name="device_msg">终端消息</string>
+    <string name="platform_msg">平台消息</string>
+    <string name="no_new_data">已是最新数据</string>
+    <string name="alert_message_content">防盗器报警</string>
+    <string name="delete_alert_message_success">标记成功！</string>
+    <string name="delete_alert_message_fail">标记失败！</string>
+    <string name="delete_all_message">标记全部</string>
+    <string name="no_history_info">没有历史消息</string>
+
+    <!--车辆设置界面-->
+    <string name="title_car_set">车辆设置</string>
+    <string name="get_obd_data_failed">获取OBD数据失败</string>
+    <string name="get_car_data_failed">获取车辆数据失败</string>
+    <string name="set_silent_mode_success">开启静音模式成功！</string>
+    <string name="set_silent_mode_failed">开启静音模式失败！</string>
+    <string name="close_silent_mode_success">关闭静音模式成功！</string>
+    <string name="close_silent_mode_failed">关闭静音模式失败！</string>
+    <string name="set_mileage_success">修改里程成功！</string>
+    <string name="set_mileage_failed">修改里程失败！</string>
+    <string name="open_auto_padlock_success">打开行车自动落锁成功！</string>
+    <string name="open_auto_padlock_failed">打开行车自动落锁失败！</string>
+    <string name="close_auto_padlock_success">关闭行车自动落锁成功！</string>
+    <string name="close_auto_padlock_failed">关闭行车自动落锁失败！</string>
+    <string name="set_heating_time_success">设置预热时间成功！</string>
+    <string name="set_heating_time_failed">设置预热时间失败！</string>
+    <string name="alter_carinfo_success">修改车辆信息成功！</string>
+    <string name="alter_carinfo_failed">修改车辆信息失败！</string>
+    <string name="alter_deletecarinfo_success">删除车辆信息成功！</string>
+    <string name="alter_deletecarinfo_failed">删除车辆信息失败！</string>
+    <string name="submit_info">提交更改</string>
+    <string name="car_obj_name">车牌号码</string>
+    <string name="device_sim_num">SIM卡号</string>
+    <string name="service_expire">服务到期</string>
+    <string name="annual_survey">年检提醒</string>
+    <string name="annual_survey_date">年检到期日</string>
+    <string name="insurance_notify">保险提醒</string>
+    <string name="insurance_notify_date">保险到期日</string>
+    <string name="maintenance_notify">保养提醒</string>
+    <string name="maintenance_notify_mileage">保养里程</string>
+    <string name="auto_padlock">行车自动落锁</string>
+    <string name="silent_mode">静音模式</string>
+    <string name="current_mileage">行驶里程</string>
+    <string name="time_preheat">预热时间</string>
+    <string name="click_for_setting_date">点击设置日期</string>
+    <string name="input_maintenance_mileage">输入保养里程</string>
+    <string name="alter">更改</string>
+    <string name="ten_minutes">10分钟</string>
+    <string name="twenty_minutes">20分钟</string>
+    <string name="thirty_minutes">30分钟</string>
+
+    <!--地图界面-->
+    <string name="trace">跟踪</string>
+    <string name="trajectory">轨迹</string>
+    <string name="no_enough_gps_data">无足够数据以供回放</string>
+    <string name="no_permission">没有权限，无法进行此操作！</string>
+    <string name="max_replay_speed">已是最大回放速度！</string>
+    <string name="min_replay_speed">已是最小回放速度！</string>
+    <string name="gps_offline">GPS不在线，无法操作！</string>
+    <string name="start_tracing">开始跟踪</string>
+    <string name="get_gps_data_failed">获取车辆GPS数据失败</string>
+    <string name="get_phone_gps_fail">获取手机位置信息失败，请重新进入</string>
+
+    <!--我的账户-->
+    <string name="account_name">用户名称</string>
+    <string name="license_alert">驾驶证年检提醒</string>
+    <string name="license_alert_date">年检日期</string>
+    <string name="alter_user_info_success">修改信息成功！</string>
+    <string name="alter_user_info_fail">修改信息失败！</string>
+
+    <!--obd页面-->
+    <string name="obd_describe_exception">异常</string>
+</resources>

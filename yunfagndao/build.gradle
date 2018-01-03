@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config_debug {
+            keyAlias 'debug'
+            keyPassword '66293309'
+            storeFile file('E:\\AndroidWorkes\\yfd_0729\\RxjavaDemo\\vrd_pakage.jks')
+            storePassword '66293309'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '27.0.1'
+    defaultConfig {
+        applicationId "com.vrd.tech.yfd"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 11
+        versionName "1.7"
+    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.config_debug
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.victor:lib:1.0.4'
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile rootProject.ext.dependencies["design"]
+    compile rootProject.ext.dependencies["retrofit2"]
+    compile rootProject.ext.dependencies["converter-gson"]
+    compile rootProject.ext.dependencies["adapter-rxjava"]
+    compile rootProject.ext.dependencies["butterknife"]
+    compile rootProject.ext.dependencies["rxjava"]
+    compile rootProject.ext.dependencies["rxandroid"]
+    compile rootProject.ext.dependencies["percent-layout"]
+    compile rootProject.ext.dependencies["zxing"]
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+    compile files('libs/AMap_3DMap_V3.2.1_20160225.jar')
+    compile files('libs/AMap_Search_V3.2.1_20160308.jar')
+    compile 'com.jcodecraeer:xrecyclerview:1.2.7'
+    compile 'cn.aigestudio.datepicker:DatePicker:2.2.0'
+    compile files('libs/AMap_Navi_v1.7.0.2_20160315.jar')
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
+    compile files('libs/jpush-android-2.1.7.jar')
+}

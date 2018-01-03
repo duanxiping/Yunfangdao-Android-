@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent">
+
+        <TextView
+            style="@style/default_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_car_set" />
+
+        <TextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="@string/submit_info"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--左边文字描述-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/car_obj_name" />
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/device_sim_num" />
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/device_serial" />
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/auto_padlock" />
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/silent_mode" />
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/current_mileage" />
+
+                <TextView
+                    style="@style/car_set_item_left"
+                    android:text="@string/time_preheat" />
+            </LinearLayout>
+            <!--右边content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/objName"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="@string/car_obj_name" />
+
+                <TextView
+                    android:id="@+id/simNumber"
+                    style="@style/car_set_item_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="@string/device_sim"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/deviceSerial"
+                    style="@style/car_set_item_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="@string/device_serial"
+                    android:textSize="16sp" />
+
+                <ToggleButton
+                    android:id="@+id/autoPadlock"
+                    style="@style/car_set_toggle" />
+
+                <ToggleButton
+                    android:id="@+id/silentMode"
+                    style="@style/car_set_toggle" />
+
+                <RelativeLayout style="@style/car_set_item_right">
+
+                    <EditText
+                        android:id="@+id/currentMileage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/current_mileage" />
+
+                    <Button
+                        android:id="@+id/btnAlterMileage"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="60dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/alter"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/timeChoose"
+                    style="@style/car_set_item_right"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/time1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ten_minutes" />
+
+                    <RadioButton
+                        android:id="@+id/time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twenty_minutes" />
+
+                    <RadioButton
+                        android:id="@+id/time3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thirty_minutes" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/deleteVehicheBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="删除车辆"/>
+</LinearLayout>
+

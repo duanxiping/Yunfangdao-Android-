@@ -1,0 +1,946 @@
+登录接口
+请求参数
+{
+  "action": "login",
+  "username": "user",
+  "password": "000000"
+}
+备注：密码为md5加密后的小写字串
+
+返回
+{
+  "status_code": 0,
+  "auth_code": "1bea7378a3c37349dfb8166caecfa9e5",
+  "cust_id": 1308,	//用户ID
+  "cust_name": "tsang",		//用户名
+  
+  
+  "tree_path": ",1,1308,",		//未用
+  "level": 1,					//未用
+  "send_type": 0,				//未用
+  "number_type": 1,				//未用
+  "host": "42.121.53.207",		//未用
+  "port": "80",					//未用
+  "vcs_cust_id": 1362			//未用
+}
+
+注册
+请求
+{
+  "action": "register",
+  "auth_code": "RAKjBp6qPxgzEYwftE2Lug==",
+  "imei": "201650205202000500",
+  "sim": "15914005528",
+  "mobile": "15914005526"			//用户名，后六位作为密码
+}
+返回
+{
+  "status_code": 0
+}
+
+查询终端信息(无法查询状态码为：6)
+请求
+{
+  "action": "device",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "barcode": "201650205202000500"	//设备条码
+}
+返回
+{
+  "status_code": 0,
+  "serial": "699501000001234",		//设备条码
+  "if_register": false,				//是否注册
+  "channel": 2,						//未用
+  "mdt_name": "W12",				//产品类型
+  "imei": "699501000001234"
+}
+
+获取验证码
+请求
+{
+  "action": "valid_code",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "mobile": "15914005526",
+  "type": "0"				// 待定，不明确
+}
+回复
+{
+  "status_code":0,
+  "valid_code":123465
+}
+
+重置密码
+请求
+{
+  "action": "reset_password",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "user_name": "15914005526",
+  "new_password": "4515195"
+}
+备注：密码为md5加密后的小写字串
+
+回复
+{
+  "status_code": 0
+}
+
+
+获取账户下所有设备
+请求
+{
+  "action": "vehicle",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "username": "15914005526",
+  "business_type": "1",			//未用
+  "page_no": "1",
+  "page_count": 50
+}
+返回
+
+{ "total": 2,
+  "page_total": 2,
+  "data": [
+    {
+      "cust_id": 1306,			//用户ID
+      "obj_id": 8237,			//设备ID
+      "obj_name": "13625094944",	//车牌号(默认sim卡号)
+      "serial": "315236545212542",	//条码
+      "service_end_date": "2016-03-30T16:00:00.000Z",		//服务到期时间
+      "sim": "13625094944"	//卡号
+    }
+  ]
+}
+
+ { "total": 2,
+  "page_total": 2,
+  "data": [
+    {
+      "_id": "552e3aac3f9d61ef58000005",
+      "cluster_id": 5,
+      "create_time": "2015-04-15T10:17:16.686Z",
+      "cust_id": 1306,			//用户ID
+      "obj_id": 8237,			//设备ID
+      "obj_name": "13625094944",	//车牌号(默认sim卡号)
+      "op_mobile": "18664554179",	//
+      "op_mobile2": "",
+      "rest_host": "42.121.53.207",
+      "rest_port": 80,
+      "serial": "315236545212542",	//条码
+      "service_end_date": "2016-03-30T16:00:00.000Z",		//服务到期时间
+      "sim": "13625094944",	//卡号
+      "active_obd_err": [], //OBD错误码
+      "active_gps_data": {
+        "device_id": "315236545212542",
+        "lon": 0,		//经度
+        "lat": 0,		//纬度
+        "speed": 0,		//速度
+        "direct": 0,	//角度
+        "gps_flag": 1,
+        "mileage": 0,	//里程
+        "fuel": 0,		//油量
+        "temp": 0,		//温度
+        "status": "000002000000",	//状态
+        "cmd_type": 0,	//命令类型
+        "cmd_word": "UP",	//命令字
+        "data": "",
+        "gps_time": "1999-11-29T16:00:00.000Z",		//gps时间
+        "rcv_time": "2015-04-16T08:43:34.507Z",		//接收时间
+        "signal": 14,	//信号
+        "battery": 4,	//电量
+        "event": 4114,
+        "uni_status": [],
+        "uni_alerts": []
+      }
+    },
+    {
+      "_id": "53660b56150d7b5a52000010",
+      "cluster_id": 5,
+      "create_time": "2014-05-04T09:41:42.178Z",
+      "cust_id": 1306,
+      "obj_id": 4869,
+      "obj_name": "14545500582",
+      "op_mobile": "18664554179",
+      "op_mobile2": "",
+      "rest_host": "42.121.53.207",
+      "rest_port": 80,
+      "serial": "135031000994",
+      "service_end_date": "2015-04-29T16:00:00.000Z",
+      "sim": "14545500582",
+      "active_obd_err": [],
+      "active_gps_data": {
+        "device_id": "305213321015993",
+        "lon": 85.8674,
+        "lat": 47.43554666666667,
+        "speed": 0,
+        "direct": 0,
+        "gps_flag": 1,
+        "mileage": 0,
+        "fuel": 0,
+        "temp": 0,
+        "status": "004002020000",
+        "cmd_type": 0,
+        "cmd_word": "UP",
+        "data": "",
+        "gps_time": "2015-04-16T08:38:04.000Z",
+        "rcv_time": "2015-04-16T08:45:31.589Z",
+        "signal": 20,
+        "battery": 4,
+        "event": 4114,
+        "uni_status": [
+          8197
+        ],
+        "uni_alerts": []
+      }
+    }
+  ]
+}
+
+{ "total": 2,
+  "page_total": 2,
+  "data": [
+    {
+      "cust_id": 1306,			//用户ID
+      "obj_id": 8237,			//设备ID
+      "obj_name": "13625094944",	//车牌号(默认sim卡号)
+      "serial": "315236545212542",	//条码
+      "service_end_date": "2016-03-30T16:00:00.000Z",		//服务到期时间
+      "sim": "13625094944"	//卡号
+    }
+  ]
+}
+
+
+获取obj_id值
+请求
+{
+  "action": "obj_id",
+  "username": "15914005526",
+  "password": "4515195",
+  "serial": "216052035203202"
+}
+备注：密码为md5加密后的小写字串
+返回
+{
+  "status_code": 0,
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id": "455"		//设备ID
+}
+
+获取车辆状态信息接口
+请求
+{
+  "action": "vehicle_status",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id": "456"
+}
+回复
+{
+    "__v": 0,
+    "_id": "55ebdeca33602f410e00002b",
+    "active_gps_data": {
+        "battery": 0,		//电量
+        "cmd_type": 0,		//未用
+        "cmd_word": "UP",	//命令字串
+        "data": "",			//未用
+        "device_id": "696501000000188",	//条码
+        "direct": 0,	//方向
+        "event": 4114,	//未用
+        "fuel": 0,  	//保留
+        "gps_flag": 1, 	//是否定位
+        "gps_time": "1999-11-29T16:00:00.000Z",	//gps时间
+        "lat": 0,	//经度
+        "lon": 0,	//纬度
+        "mileage": 0,  //里程
+        "rcv_time": "2015-09-07T01:44:22.755Z",	//接收时间
+        "signal": 25,	//信号
+        "speed": 0,  	//速度
+        "status": "004002000000",	//状态
+        "temp": 0,	//未用
+        "uni_alerts": [],//未用
+        "uni_status": []//未用
+    },
+    "active_obd_data": {   //硬件确认
+        "chqwd": 0,   	//三元催化器温度 单位摄氏度
+        "cqryxz": 0,  	//长期燃油修正
+        "dhtqj": 0,   	//点火角提前 
+        "dpdy": 0,  	//电瓶电压 单位V
+        "dqyl": 0,  	//大气压力
+        "fdjfz": 0,  	//发动机负载
+        "fdjzs": 0,  	//发动机转速
+        "hjwd": 0,   	//环境温度
+        "jqll": 0,		
+        "jqmkd": 0,  	//节气门开度
+        "jqwd": 0,   	//进气温度
+        "jqyl": 0,  	//进气压力
+        "jsjqll": 0,	//
+        "ryyl": 0,  	//燃油压力
+        "ss": 0,		//
+        "sw": 0,     	//水温
+        "syyl": 0,   	//剩余油量
+        "update_time": "2015-09-07T01:44:43.675Z"
+    },
+    "active_obd_err": [],//未用
+    "business": [],//未用
+    "business_type": 2,//未用
+    "call_phones": [],//未用
+    "cluster_id": 5,//未用
+    "create_time": "2015-09-06T06:35:54.151Z",//未用
+    "create_user_id": 0,//未用
+    "cust_id": 1308,	//用户ID
+    "cust_name": "",	//用户名称
+    "device_id": "696501000000188",		//设备条码
+    "geofences": [],//未用
+    "is_online": true,//未用
+    "mdt_type": 0,//未用
+    "mobile_operator": "",//未用
+    "obj_id": 8978,		//设备ID
+    "obj_name": "13774519300",//设备车牌号
+    "obj_type": 1,//未用
+    "op_mobile": "18666293309",		//用户主号
+    "op_mobile2": "", //未用
+    "p20c_status": {  //硬件确认
+        "P20C_ACC": false,	//设防报警状态
+        "P20C_ALARM": false,	
+        "P20C_ALERT_LOOK": false, 
+        "P20C_ALERT_OPEN": false,
+        "P20C_ALERT_VIRBRATE": false,	//车门震动
+        "P20C_BREAK": false, 			//脚刹
+        "P20C_DOOR_LOCK": true, 		//门锁
+        "P20C_ENGINE" : true,  			//引擎
+        "P20C_ENGINE_HOOD": false,		//引擎盖
+        "P20C_FORTIFY": false,			//设防状态
+        "P20C_HAND_BREAK": false,		//手刹状态
+        "P20C_LEFT_BACK_DOOR": false,	
+        "P20C_LEFT_BACK_TYRE": false,
+        "P20C_LEFT_BACK_WIN": false,
+        "P20C_LEFT_FRONT_DOOR": false,	//左前门
+        "P20C_LEFT_FRONT_TYRE": false,	//左前胎压
+        "P20C_LEFT_FRONT_WIN": false, 	//左前车窗
+        "P20C_LITTLE_LAMP": false,		//小灯
+        "P20C_RIGHT_BACK_DOOR": false,
+        "P20C_RIGHT_BACK_TYRE": false,
+        "P20C_RIGHT_BACK_WIN": false,
+        "P20C_RIGHT_FRONT_DOOR": false,
+        "P20C_RIGHT_FRONT_TYRE": false,
+        "P20C_RIGHT_FRONT_WIN": false,
+        "P20C_TRUNK": false 		//后尾箱
+    },
+    "params": {	//需要硬件确认
+        "accoff_interval": 20,  	//预热时间
+        "end_time": "00:00:00",		//
+        "gps_interval": 30,
+        "is_accoff_autolock": false,
+        "is_arming": false,
+        "is_autolock": false,   	//行车自动落锁
+        "is_autolockdoor": true,  	//行车自动锁车
+        "is_lock": false,
+        "is_lockdoor": true,    	//车辆开关锁状态，true关锁状态，false开锁状态
+        "is_repair": false,
+        "is_sound": false,
+        "is_start": 0,    			//车辆启动状态；0熄火；1启动(原车钥匙启动)；2：远程启动；3远程启动
+        "network_loc": false,
+        "restart_time": 2,
+        "restrict": false,
+        "sensitivity": 1,
+        "sleep": false,
+        "speed_limit": 0,
+        "start_time": "00:00:00",
+        "version": "C10_60A_VER_1.0.31"
+    },
+    "reg_rule": {		//需要焦健确认
+        "card_type": 1,
+        "fee_type": {
+            "period": 12,
+            "price": 120,
+            "unit": "元/年"
+        },
+        "first_interval": 12,
+        "mdt_type": {
+            "channel": 2,
+            "fittings": ",60,61,64,63,65,",
+            "mdt_name": "C10",
+            "protocol_ver": "2.0"
+        }
+    },
+    "serial": "696501000000188",   	//条码
+    "server_ip": "42.121.53.152",	//未用
+    "service_end_date": "2016-08-30T16:00:00.000Z",  	//服务到期时间
+    "sim": "13774519300",  			//卡号
+    "sim_type": 1,					//未用
+    "sms_phones": [],				//未用
+    "update_time": "2015-09-07T01:46:07.363Z"	//未用
+}
+
+获取车位置数据
+请求
+{
+  "action": "vehicle_active_gps",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id": "456"
+}
+
+回复
+{
+  "_id": "552e3aacf8674dfc5e000057",
+  "obj_id": 8194,
+  "obj_name": "13625094944",
+  "p20c_status": {
+    "P20C_RIGHT_BACK_TYRE": false,
+    "P20C_LEFT_BACK_TYRE": false,
+    "P20C_RIGHT_FRONT_TYRE": false,
+    "P20C_LEFT_FRONT_TYRE": false,
+    "P20C_RIGHT_BACK_WIN": false,
+    "P20C_LEFT_BACK_WIN": false,
+    "P20C_RIGHT_FRONT_WIN": false,
+    "P20C_LEFT_FRONT_WIN": false,
+    "P20C_ALERT_LOOK": false,
+    "P20C_ALERT_VIRBRATE": false,
+    "P20C_ALERT_OPEN": false,
+    "P20C_LITTLE_LAMP": false,
+    "P20C_DOOR_LOCK": false,
+    "P20C_TRUNK": false,
+    "P20C_ENGINE_HOOD": false,
+    "P20C_HAND_BREAK": false,
+    "P20C_ALARM": false,
+    "P20C_FORTIFY": false,
+    "P20C_ACC": false,
+    "P20C_LEFT_FRONT_DOOR": false,
+    "P20C_RIGHT_FRONT_DOOR": false,
+    "P20C_LEFT_BACK_DOOR": false,
+    "P20C_RIGHT_BACK_DOOR": false,
+    "P20C_BREAK": false,
+    "P20C_ENGINE": false
+  },
+  "sim": "13625094944",
+  "active_obd_err": [],
+  "active_gps_data": {
+    "rev_lat": 0,   
+    "rev_lon": 0,
+    "device_id": "315236545212542",
+    "lon": 0,      
+    "lat": 0,
+    "speed": 0,    
+    "direct": 0,   
+    "gps_flag": 1, 
+    "mileage": 0,
+    "fuel": 0,   
+    "temp": 0,
+    "status": "000002000000",
+    "cmd_type": 0,
+    "cmd_word": "UP",
+    "data": "",
+    "gps_time": "1999-11-29T16:00:00.000Z",
+    "rcv_time": "2015-04-16T09:03:38.426Z",
+    "signal": 15,
+    "battery": 4,
+    "event": 4114,
+    "uni_status": [],
+    "uni_alerts": []
+  }
+}
+
+获取车辆位置新接口
+请求
+{
+  "action": "new_vehicle_active_gps",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id": "456"
+}
+回复
+{
+  "now_time": "2016-03-28T03:41:03.345Z",
+  "_id": "56dd228f0f16fed17c00001b",
+  "active_obd_data": {
+    "sw": 90,
+    "dpdy": 13.828  //电池电压
+  },
+  "alarm_num": 2,  //未读报警数量
+  "obj_id": 10841, //车辆ID
+  "obj_name": "13048872351", //车牌号
+  "p20c_status": {
+    "P20C_RIGHT_BACK_WIN": false,
+    "P20C_LEFT_BACK_WIN": false,
+    "P20C_RIGHT_FRONT_WIN": false,
+    "P20C_LEFT_FRONT_WIN": false,
+    "P20C_LITTLE_LAMP": false,
+    "P20C_TRUNK": false,
+    "P20C_LEFT_FRONT_DOOR": false,
+    "P20C_RIGHT_FRONT_DOOR": false,
+    "P20C_LEFT_BACK_DOOR": false,
+    "P20C_RIGHT_BACK_DOOR": false
+  },
+  "serial": "699501000004351", //条码
+  "sim": "13048872351",			//sim卡号
+  "active_gps_data": {
+    "b_lat": 22.573226999999996,	//百度纬度
+    "b_lon": 113.87506866666668,	//百度经度
+    "rev_lat": 22.567002949604735,	//google纬度
+    "rev_lon": 113.86862213626247,	//google经度
+    "lon": 113.86367166666666,		//原始纬度
+    "lat": 22.569995,				//原始经度
+    "gps_time": "2016-03-26T10:08:21.000Z",
+    "rcv_time": "2016-03-26T10:08:31.790Z"
+  },
+  "params": {
+    "is_control": 0, //0,  操作成功与否的判断字段 0 无状态 1 解锁失败 2 解锁成功 3.关锁失败 4 关锁成功 5 启动失败 6 启动成功 7 熄火失败 8 熄火成功
+    "is_lockdoor": false, //开关锁状态判断字段 true代表关锁，false代表开锁
+    "is_start": 1 // 启动字段 0代表未启动（熄火） 1 启动 2 远程启动 3 启动中
+  }
+}
+
+获取轨迹信息
+请求
+{
+  "action": "gps_track",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id": "456",
+  "start_time": "2016-01-01 00:00:00",
+  "end_time": "2016-01-01 23:59:59",
+  "page_no": 1,
+  "page_count": 50
+}
+回复
+{
+  "total": 410,
+  "page_total": 2,
+  "data": [
+    {
+      "b_lat": 28.228759,				//百度纬度
+      "b_lon": 112.88195000000002,		//百度经度
+      "rev_lat": 28.223003026786618,	//google纬度
+      "rev_lon": 112.87538268918891,	//google经度
+      "device_id": "56621502989",		//条码
+      "lon": 112.86995,					//原始纬度
+      "lat": 28.2265,					//原始经度
+      "speed": 0,	//速度
+      "direct": 307,	//角度
+      "gps_flag": 1,	//未用
+      "mileage": 25118,	//里程
+      "fuel": 0,	//未用
+      "temp": 0,	//未用
+      "gps_time": "2016-03-15T16:01:40.000Z",		//gps时间
+      "rcv_time": "2016-03-15T16:02:08.211Z",		//服务器接收时间
+      "signal": 17,	//信号
+      "_id": "56e832008a679de134187deb",	//未用
+      "uni_alerts": [],	//未用
+      "uni_status": []	//未用
+    },
+    {
+      "b_lat": 28.226628000000005,
+      "b_lon": 112.881035,
+      "rev_lat": 28.220874300956538,
+      "rev_lon": 112.87447370954186,
+      "device_id": "56621502989",
+      "lon": 112.86904,
+      "lat": 28.22437,
+      "speed": 0,
+      "direct": 307,
+      "gps_flag": 1,
+      "mileage": 25118,
+      "fuel": 0,
+      "temp": 0,
+      "gps_time": "2016-03-16T00:33:55.000Z",
+      "rcv_time": "2016-03-16T00:33:57.945Z",
+      "signal": 18,
+      "_id": "56e8a9f5ec5852781612cf25",
+      "uni_alerts": [],
+      "uni_status": [
+        8196
+      ]
+    }
+  ]
+}
+
+车辆操作指令
+请求
+{
+  "action": "car_command",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id": "456",
+  "cmd_type": "16417",
+  "mode": "status",
+  "params": 
+}
+
+回复
+{
+  "status_code": 0
+}
+
+车辆设置	//保留待定，
+请求
+{
+  "action": "car_set",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id": "456",			//车辆ID
+  "obj_name": "1446hj",		//车牌号
+  "annual_inspect_alert": "2016-01-01 23:59:59",
+  "annual_inspect_date": 1,
+  "insurance_alert": "",
+  "insurance_date": "",
+  "maintain_alert": "",
+  "maintain_mileage": "",
+  "reg_rule": [],
+  "service_end_date": "",	//服务到期时间
+  "obj_type": "",
+  "device_id": "",			//设备条码
+  "serial": "",				//设备条码
+  "sim": "",				//设备卡号
+  "sim_type": "",
+  "mobile_operator": "",
+  "op_mobile": "",
+  "op_mobile2": "",
+  "brand": "",
+  "mdt_type": "",			//设备类型
+  "sms_phones": [],
+  "call_phones": []
+}
+返回
+{
+  "status_code": 0
+}
+
+车辆设置扩展
+请求
+{
+  "action": "car_command_ex",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id": "456",
+  "cmd_type": "16417",
+  "mode": "names",
+  "params": 1
+}
+备注：
+
+行车自动落锁cmd_type
+ /**
+  * 行车自动落锁开
+  */
+ var COMMAND_AUTOLOCKON = "16418";
+  /**
+   * 行车自动落锁关
+   */
+ var COMMAND_AUTOLOCKOFF = "16419";
+行车自动落锁params: "{}"
+
+更改行驶里程
+命令为"16404" params: "{mileage:<里程数>}" 
+
+预热时间 （三个选项10，20，30）
+String COMMAND_ACCOFF_INTERVAL_10 = "16440";// 预热
+String COMMAND_ACCOFF_INTERVAL_20 = "16441";
+String COMMAND_ACCOFF_INTERVAL_30 = "16442";
+params:"{}"
+
+静音模式/声光模式
+String CMD_SILENT = "16408";// 静音模式
+String CMD_SOUND = "16409";// 声光模式
+params:"{}"
+
+返回
+{
+  "status_code": 0
+}
+
+个人信息
+请求
+{
+  "action": "personal",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "vcs_cust_id": "456"			//个人ID
+}
+
+回复
+{
+  "__v": 0,
+  "_id": "54fec10061b4479f1c00006c",
+  "annual_inspect_alert": false,	//驾驶证年检
+  "annual_inspect_date": "1970-01-01T00:00:00.000Z",	//驾驶证年检时间
+  "city": "深圳",		//城市
+  "cluster_id": 5,
+  "contacter": "18666293309",
+  "contacter_tel": "18666293309",
+  "create_time": "2015-03-10T10:01:36.707Z",
+  "cust_id": 1362,		//用户ID
+  "cust_name": "tsang",	//用户名称
+  "cust_type": 1,		
+  "dealer_id": 256,
+  "level": 2,
+  "parent_cust_id": 1,	//用户上级ID
+  "province": "广东",	//省份
+  "push_type": 2,
+  "send_type": 0,
+  "tree_path": "undefined1362,",
+  "update_time": "2015-12-30T10:23:51.520Z",
+  "vehicle_total": 1,	//设备数目
+  "devices": [
+    "18666293309"	
+  ],
+  "users": [
+    {
+      "user_name": "18666293309",
+      "update_time": "2015-03-10T10:01:36.682Z",
+      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "mac": "38:bc:1a:2a:b3:6d"
+    }
+  ],
+  "roles": [
+    "1"
+  ],
+  "reg_rule": {
+    "first_interval": 12,
+    "card_type": 1,
+    "mdt_type": {
+      "fittings": ",60,61,64,63,65,",
+      "protocol_ver": "3.0",
+      "mdt_name": "W20"
+    },
+    "fee_type": {
+      "unit": "元/年",
+      "period": 12,
+      "price": 120
+    }
+  }
+}
+
+修改个人信息
+请求
+{
+  "action": "personal_modify",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "vcs_cust_id": "456",
+  "mode": "simple",
+  "cust_name": "",
+  "cust_type": "",
+  "parent_cust_id": "",
+  "annual_inspect_alert": "",
+  "annual_inspect_date": ""
+}
+回复
+{
+  "status_code": 0
+}
+
+报警信息查询
+请求
+{
+  "action": "alarm",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id":"1234",
+  "is_read": "0",
+  "page_no": "",
+  "page_count": "",
+  "alert_type": ""
+}
+回复
+{
+  "total": 1,
+  "page_total": 1,
+  "data": [
+    {
+      "rev_lat": 22.67147827396723,
+      "rev_lon": 113.8016800974404,
+      "_id": "5662f32fb9155ce40c001791",
+      "speed": 0,
+      "max_speed": null,
+      "lat": 22.67437,
+      "lon": 113.79659,
+      "alert_time": "2015-12-05T14:22:39.847Z",
+      "alert_type": 12293,
+      "obj_id": 9579,
+      "alert_id": 20
+    }
+  ]
+}
+
+
+
+单个修改已读
+请求
+{
+  "action": "alarm_read",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id":"1234"
+  "alert_id": "0"
+}
+回复
+{
+  "status_code": 0
+}
+所有修改已读
+请求
+{
+  "action": "alarm_all_read",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id":"1234"
+}
+回复
+
+消息历史记录
+请求
+{
+  "action": "notification",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "mode":"unread",
+  "update_time": "2016-01-01 00:00:00",
+  "page_no":"1",
+  "page_count":"50"
+}
+回复
+{
+  "total": 57,
+  "page_total": 10,
+  "data": [
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-24T03:50:30.367Z",
+      "msg_type": 2,
+      "content_en": "PKE unlock ok.",
+      "content": "原车钥匙解锁成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4475218,
+      "_id": "5539bd86ae33878629003425",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-24T00:56:23.744Z",
+      "msg_type": 2,
+      "content_en": "Auto lock ok.",
+      "content": "原车钥匙锁车成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4473055,
+      "_id": "553994b7ae33878629000f8d",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-23T11:18:39.327Z",
+      "msg_type": 2,
+      "content_en": "PKE unlock ok.",
+      "content": "原车钥匙解锁成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4470697,
+      "_id": "5538d50f4920f5ee1c006e1a",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-22T10:56:29.253Z",
+      "msg_type": 2,
+      "content_en": "Auto lock ok.",
+      "content": "原车钥匙锁车成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4464869,
+      "_id": "55377e5d24c2e21f4400001a",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-21T00:36:18.111Z",
+      "msg_type": 2,
+      "content_en": "PKE unlock ok.",
+      "content": "原车钥匙解锁成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4452700,
+      "_id": "55359b82dca64cf609000a0f",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-20T15:55:17.178Z",
+      "msg_type": 2,
+      "content_en": "Auto lock ok.",
+      "content": "原车钥匙锁车成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4451966,
+      "_id": "553521655d1ac9571400146e",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-20T15:23:52.201Z",
+      "msg_type": 2,
+      "content_en": "PKE unlock ok.",
+      "content": "原车钥匙解锁成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4451889,
+      "_id": "55351a085d1ac9571400125d",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-20T15:00:20.886Z",
+      "msg_type": 2,
+      "content_en": "Auto lock ok.",
+      "content": "原车钥匙锁车成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4451818,
+      "_id": "553514845d1ac957140010ca",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-20T14:59:42.817Z",
+      "msg_type": 2,
+      "content_en": "PKE unlock ok.",
+      "content": "原车钥匙解锁成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4451816,
+      "_id": "5535145e5d1ac957140010c4",
+      "__v": 0
+    },
+    {
+      "status": false,
+      "lat": 0,
+      "lon": 0,
+      "rcv_time": "2015-04-20T14:29:36.727Z",
+      "msg_type": 2,
+      "content_en": "Auto lock ok.",
+      "content": "原车钥匙锁车成功！",
+      "cust_id": 0,
+      "obj_id": 8195,
+      "noti_id": 4451733,
+      "_id": "55350d505d1ac95714000ebb",
+      "__v": 0
+    }
+  ]
+}
+重置is_control字段
+请求
+{
+  "action": "reset_control",
+  "auth_code": "bba2204bcd4c1f87a19ef792f1f68404",
+  "obj_id":"1433",
+}
+回复
+{
+  "status_code": 0
+}
